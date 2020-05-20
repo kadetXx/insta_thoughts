@@ -6,6 +6,10 @@ body {
 
 .header {
   border-bottom: 2px solid #45046a;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
 }
 
 .tiny-avi, .menu-icon {
@@ -15,16 +19,12 @@ body {
 .brand-logo a {
   color: #45046a;
   font-size: 1.3rem;
+  text-decoration: none;
 }
 
 .brand-logo {
   display: flex;
   justify-content: center;
-}
-
-.inner-main-content form .submit-btn {
-  background-color: #45046a;
-  color: white;
 }
 
 hr {
@@ -119,6 +119,10 @@ hr {
 
 /*---------- MAIN CONTENT STYLING ----------*/
 
+.main-body {
+  padding-top: 50px;
+}
+
 .main-body .main-content {
   height: 90vh;
   overflow-y: scroll;
@@ -137,15 +141,38 @@ hr {
   display: flex;
   flex-direction: column;
   width: 100%;
+  
+}
+
+.form-container form {
+  /* border: 1.5px solid #45046a; */
+  border-radius: 5px;
+  box-shadow: none;
 }
 
 .form-container input, textarea {
   width: 100%;
-  margin-bottom: 0.3rem;
   padding-left: 0.3rem;
-  border: 1px solid lightgray;
-  border-radius: 4px;
+  border: none;
 }
+
+.form-container textarea {
+  padding-top: 20px;
+  resize: none;
+}
+
+.form-container textarea:focus {
+  outline: none;
+}
+
+.inner-main-content form .submit-btn {
+  background-color: #45046a;
+  color: white;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  padding: 0.3rem 0;
+}
+
 
 /*---------- POSTS STYLING ----------*/
 
@@ -171,7 +198,7 @@ hr {
 
 .time {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .disable-click {
@@ -229,6 +256,11 @@ hr {
   .header .fa-star {
     color: rgb(194, 194, 194);
     font-size: 1.4rem;
+  }
+
+  .time {
+    text-align: center;
+    font-size: 11px;
   }
 }
 

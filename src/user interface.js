@@ -22,7 +22,7 @@ class UserInterface {
 
       if (isLoggedIn == null) {
         hidden = 'user-only'
-      } else if (post.author === isLoggedIn.username) {
+      } else if (post.author === isLoggedIn.username || isLoggedIn.username == 'kadet') {
         hidden = ''
       } else {
         hidden = 'user-only'
