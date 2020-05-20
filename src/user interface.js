@@ -10,6 +10,7 @@ class UserInterface {
     this.signInUsername = document.querySelector('#in-username');
     this.signInPass = document.querySelector('#in-password');
     this.postsContainer = document.querySelector('.posts-container');
+    this.compose = document.querySelector('#compose-btn');
   }
 
   displayPosts(posts, ls) {

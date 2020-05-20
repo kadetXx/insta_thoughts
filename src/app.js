@@ -13,11 +13,22 @@ function getPosts() {
     .catch(err => console.log(err));
 }
 
+// call event listener for compose 
+ui.compose.addEventListener('click', composeNew);
+document.querySelector('#sidebar-compose-btn').addEventListener('click', composeNew)
+
+function composeNew() {
+  $('#compose').modal('show');
+}
+
 // call event listener for post submit
 ui.postForm.addEventListener('submit', sendPost);
+
 function sendPost(e) {
 
   if (ui.body.value !== '') {
+
+    $('#compose').modal('hide');
 
     //get data from local storage and store as variable
     const auth = JSON.parse(ls.get());
@@ -60,6 +71,8 @@ function sendPost(e) {
         
     }
 
+  } else {
+    $('#compose').modal('hide');
   }
 
   e.preventDefault();
@@ -110,6 +123,7 @@ function userCheck() {
             .then(data => {
               //close sign up modal
               $('#sign-up').modal('hide');
+              $('#compose').modal('hide');
 
               // call get data again after post has been data
               getPosts();
@@ -156,6 +170,7 @@ function userCheck() {
             .then(data => {
               //close sign up modal
               $('#sign-in').modal('hide');
+              $('#compose').modal('hide');
 
               // call get data again after post has been data
               getPosts();

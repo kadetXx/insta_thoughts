@@ -36,17 +36,44 @@
             <h4 class="username">Collins Enebeli</h4>
             <h6 class="nickname"><em>@Kadet</em></h6>
           </div>
+          <button type="button" class="btn btn-primary float-btn" id="sidebar-compose-btn">
+            <i class="fas fa-pencil-alt"></i>  New post 
+          </button>
         </div>
 
         <div class="main-content col-lg-6 pt-2">
           <div class="inner-main-content">
-            <div class="form-container">
-              <form class="post-form">
-                <textarea cols="30" rows="2" placeholder="What's on your mind..." class="body"></textarea>
-                <input type="submit" value="post thought" class="submit-btn">
-              </form>
+            
+            <!-- post modal here -->
+
+            <!-- Floating post button-->
+            <button type="button" class="btn btn-primary float-btn" id="compose-btn">
+              <span class="pre-post-icon">+</span><i class="fas fa-pencil-alt"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="compose-modal modal fade" id="compose" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="composeLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="composeLabel">Add new thought</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-container">
+                      <form class="post-form">
+                        <textarea cols="30" rows="2" placeholder="What's on your mind..." class="body"></textarea>
+                        <input type="submit" value="post thought" class="submit-btn">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <hr>
+            <!-- post modal end -->
+      
             <div class="posts-container">
             
             </div>

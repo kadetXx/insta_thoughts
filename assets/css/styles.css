@@ -102,6 +102,10 @@ hr {
   border-radius: 50%;
 }
 
+#sidebar-compose-btn {
+  background-color: #45046a;
+}
+
 /*---------- RIGHT SIDEBAR STYLING ----------*/
 
 .main-body .right-sidebar {
@@ -121,6 +125,7 @@ hr {
 
 .main-body {
   padding-top: 50px;
+  position: relative;
 }
 
 .main-body .main-content {
@@ -136,6 +141,10 @@ hr {
 
 
 /*---------- POST FORM STYLING ----------*/
+
+.modal {
+  padding-top: 10%;
+}
 
 .form-container {
   display: flex;
@@ -173,6 +182,9 @@ hr {
   padding: 0.3rem 0;
 }
 
+#compose-btn {
+  display: none;
+}
 
 /*---------- POSTS STYLING ----------*/
 
@@ -224,6 +236,27 @@ hr {
     overflow: auto;
   }
 
+  .main-body {
+    padding-top: 50px;
+    position: relative;
+  }
+
+  #compose-btn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    border: 1px solid #45046a;
+    border-radius: 30px;
+    background-color: #45046a;
+  }
+
+  .pre-post-icon {
+    position: relative;
+    bottom: 5px;
+  }
+
   .menu-icon i {
     font-size: 1.1rem;
   }
@@ -256,6 +289,10 @@ hr {
   .header .fa-star {
     color: rgb(194, 194, 194);
     font-size: 1.4rem;
+  }
+
+  .modal {
+    padding-top: 20%;
   }
 
   .time {
